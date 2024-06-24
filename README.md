@@ -1,30 +1,24 @@
-# React + TypeScript + Vite
+# Poems by Rumi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+This project involves the development and deployment of a fine-tuned Mistral-7b model to generate poems in the style of Rumi. The model is deployed via a serverless Python API and a React application provides an intuitive user interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://github.com/gunwant11/rumi/assets/72063762/9edcdcfd-e87a-4c5c-8839-7041f0a8cba0
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Fine-tuned Mistral-7b Model**: The model was fine-tuned using data collected from the web with the Unstoth framework to generate poems in the style of Rumi.
+- **Serverless Python API**: The API, deployed with Docker on RunPod, handles model inference requests.
+- **React Application**: An intuitive UI built with React allows users to easily generate and view poems.
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- **Python**: For developing the inference API.
+- **Transformers**: The Mistral-7b model was used and fine-tuned.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+- **React**: For creating the user interface.
+- **Docker**: For containerizing the API.
+- **RunPod**: For deploying the serverless API.
+- **Unstoth Framework**: For collecting and processing the data used to fine-tune the model.
